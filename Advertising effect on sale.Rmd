@@ -1,8 +1,36 @@
 ---
-title: "Effect of advertising on the sales - Simple Linear Regression"
+title: "Analysis of effect of advertising on the sales"
 output: html_notebook
 ---
-## *I. Applying Simple linear regression to predict sales:*
+## *I. Simple linear regression:*
+
+In simple linear regression, there is only one independent variable x and the relationship between the dependent variable y and x is modeled as straight line:
+<br/>
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; 𝑦= $\alpha$ + ${\beta x}$
+
+$\beta$ is the slope of the line and $\alpha$ is the intercept. Together, $\alpha$ and $\beta$ are known as the model coefficients or parameters.Once we have used training data to produce estimates $\hat{\alpha}$ and $\hat{\beta}$ for the model coefficients, we can predict future values of y by using the following equation:
+<br/>
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; $\hat{y}$ = $\hat{\alpha}$ + $\hat{\beta} x$
+
+Where $\hat{y}$ is the predicted value (it could differ from the actual value y)
+
+Let $\hat{y_{i}}$ = $\hat{\alpha}$ + $\hat{\beta} x_{i}$ be the prediction for y based on the ith value of x.
+<br/>
+Then $e_{i}$ = $y_{i}$ − $\hat{y_{i}}$ represents the ith residual — this is the difference between the ith observed value and the ith value that is predicted by our linear model. In a sense, it measures the error of prediction for the ith value. 
+
+<br/>
+We define the residual sum of squares (RSS) as:
+<br/>
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; RSS = $\sum {(y_{i} − \hat{y_{i}})^2}$  = $\sum e_{i}^2$
+
+The Ordinary Least Squares (OLS) method determines 􀷜$\hat{\alpha}$ and $\hat{\beta}$ so that to minimize RSS. It is mathematically proved that RSS is minimized for the following values of $\hat{\alpha}$ and $\hat{\beta}$:
+$\hat{\beta} = \sum (x_{i} - \overline{x})(y_{i} - \overline{y})/\sum (x_{i} - \overline{x})^2$
+
+<br/>
+$\hat{\alpha} = \overline{y} − \hat{\beta} \overline{x}$
+
+
+## *II. Applying Simple linear regression to predict sales:*
 
 ### **Data Exploration:**
 <br/>
@@ -39,5 +67,11 @@ cor(TV, sales)
 ```
 cor function shows there is a strong enough positive correlation between TV and sales.
    
-
+<br/>  
+**4. Using lm() function to fit a linear regression model to the data:**
+```{r}
+advertising_lm = lm(sales ~ TV, data = advertising)
+coefficients(advertising_lm)
+```
+In other words $\hat{\alpha}$ = 7.03259355 and $\hat{\beta}$ = 0.04753664
 
