@@ -1,0 +1,12 @@
+---
+title: "Effect of advertising on the sales - Simple Linear Regression"
+output: html_notebook
+---
+## *I. Applying Simple linear regression to predict sales:*
+
+### **Data Exploration:**
+<br/>
+**1. Reading Advertising data from the file into a data frame:**
+```{R}
+advertising = read.csv("Advertising.csv")
+```
