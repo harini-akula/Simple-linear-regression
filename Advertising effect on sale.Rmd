@@ -74,4 +74,3 @@ advertising_lm = lm(sales ~ TV, data = advertising)
 coefficients(advertising_lm)
 ```
 In other words $\hat{\alpha}$ = 7.03259355 and $\hat{\beta}$ = 0.04753664
-
