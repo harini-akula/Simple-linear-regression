@@ -74,3 +74,11 @@ advertising_lm = lm(sales ~ TV, data = advertising)
 coefficients(advertising_lm)
 ```
 In other words $\hat{\alpha}$ = 7.03259355 and $\hat{\beta}$ = 0.04753664
+   
+<br/>  
+**5. Using coefficients from linear regression model to draw a line through the scatterplot:**
+```{r}
+plot(sales ~ TV, col = "#22B3C8", ylab = "Sales", xlab = "TV", main = "Sales vs TV ads", cex.lab = 0.8, cex.main = 0.9)
+abline( 7.03259355,0.04753664,col="deeppink4" )
+```
+The coefficients of this line drawn through the scatterplot is chosen such that RSS is minimum.
