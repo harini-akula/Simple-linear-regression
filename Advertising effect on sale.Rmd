@@ -16,6 +16,22 @@ advertising = read.csv("Advertising.csv")
 <br/>
     i. Structure of the dataset:**
 ```{R}
-  str(advertising)
+str(advertising)
 ```
+The dataset contains 200 observations and four variables: the money that is spent on TV, newspaper, or radio ads and the sales in thousand dollars. **We want to study the relationship between sales and TV ads.**
+
+<br/>  
+**3. 
+<br/>
+    i. Scatterplot to analyse correlation between TV ads and sales:**
+```{r message=FALSE, warning=FALSE}
+attach(advertising)
+```
+    
+```{R}
+plot(sales ~ TV, col = "#22B3C8", ylab = "Sales", xlab = "TV", main = "Sales vs TV ads", cex.lab = 0.8, cex.main = 0.9)
+```
+From the scatterplot we can say there exists a positive correlation between sales and TV ads.
+
+
 
