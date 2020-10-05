@@ -82,3 +82,4 @@ plot(sales ~ TV, col = "#22B3C8", ylab = "Sales", xlab = "TV", main = "Sales vs 
 abline( 7.03259355,0.04753664,col="deeppink4" )
 ```
 The coefficients of this line drawn through the scatterplot is chosen such that RSS is minimum.
+
