@@ -32,6 +32,12 @@ attach(advertising)
 plot(sales ~ TV, col = "#22B3C8", ylab = "Sales", xlab = "TV", main = "Sales vs TV ads", cex.lab = 0.8, cex.main = 0.9)
 ```
 From the scatterplot we can say there exists a positive correlation between sales and TV ads.
-
+<br/>
+    ii. Analyse correlation between TV ads and sales using cor function:**
+```{r}
+cor(TV, sales)
+```
+cor function shows there is a strong enough positive correlation between TV and sales.
+   
 
 
