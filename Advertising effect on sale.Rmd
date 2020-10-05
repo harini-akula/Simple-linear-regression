@@ -10,3 +10,12 @@ output: html_notebook
 ```{R}
 advertising = read.csv("Advertising.csv")
 ```
+
+<br/>  
+**2. 
+<br/>
+    i. Structure of the dataset:**
+```{R}
+  str(advertising)
+```
+
